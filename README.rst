@@ -58,7 +58,7 @@ Specifiation of template
 .. code-block:: python
 
    pPyClone.config.report_template = """
-   ## {{title}}
+   # {{title}}
 
    PyClone[1] is a tool using Probabilistic model for inferring clonal population structure from deep NGS sequencing.
 
@@ -82,17 +82,15 @@ Generating report
 
 .. code-block:: python
 
-   PyPPL().start(pPyClone).run().report('/path/to/report', title = 'Clonality analysis using PyClone')
+   PyPPL().start(pPyClone).run().report(
+       '/path/to/report',
+       title='Clonality analysis using PyClone',
+       template='bootstrap'
+   )
 
    # or save report in a directory
-   PyPPL(name = 'Awesome-pipeline').start(pPyClone).run().report('/path/to/')
+   PyPPL(name='Awesome-pipeline').start(pPyClone).run().report('/path/to/')
    # report generated at ./Awesome-pipeline.report.html
-
-
-.. image:: https://pyppl_report.readthedocs.io/en/latest/snapshot.png
-   :target: https://pyppl_report.readthedocs.io/en/latest/snapshot.png
-   :alt: Snapshort
-
 
 Extra data for rendering
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -112,36 +110,12 @@ Then in your template, you can use it:
 
    ## {{jobs[0].description}}
 
-Showing tables with csv/tsv file
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code-block:: markdown
-
-   ```table
-   caption    : An awesome table
-   file       : /path/to/csv/tsv/file
-   header     : true
-   width      : 1   # width of each column
-   total_width: .8  # total width of the table
-   align      : default # alignment of each column
-   rows       : 10  # max rows to show
-   cols       : 0   # max cols to show, default: 0 (show all)
-   csvargs    : # csvargs for `csv.read`
-       dialect: unix
-       delimiter: "\t"
-
-You may also specify ``width`` and ``align`` for individual columns:
-
-.. code-block::
-
-   width = [.1, .2, .1]
-
 References
 ^^^^^^^^^^
 
 We use ``[1]``\ , ``[2]`` ... to link to the references, so HTML links have to be in-place (in the format of ``[text](link)`` instead of ``[text][link-index]``\ ). All references from different processes will be re-ordered and combined.
 
-Advanced usage
---------------
+See detailed documentation for writing reports in markdown
+----------------------------------------------------------
 
-`ReadTheDocs <https://pyppl_report.readthedocs.io/en/latest/>`_
+https://github.io/pwwang/pyppl_report
