@@ -87,7 +87,9 @@ download: true
 ````markdown
 ```table
 caption: Data table
-download: true # we can still download
+download: true
+csvargs:
+  delimiter: ","
 ---
 ID,Name,Sex,Age
 1,Bob,M,49
@@ -97,7 +99,9 @@ ID,Name,Sex,Age
 
 ```table
 caption: Data table
-download: true # we can still download
+download: true
+csvargs:
+  delimiter: ","
 ---
 ID,Name,Sex,Age
 1,Bob,M,49

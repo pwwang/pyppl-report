@@ -22,8 +22,8 @@ def copy_to_media(filepath, destfile):
 
     destfile = Path(destfile)
     # just overwrite asset files
-    if dest_md5 and destfile.suffix not in ('js', 'css', 'woff2', 'woff',
-                                            'eot', 'ttf'):
+    if dest_md5 and destfile.suffix not in ('.js', '.css', '.woff2', '.woff',
+                                            '.eot', '.ttf'):
         candfiles = list(destfile.parent.glob("[[]*[]]" + destfile.name))
         if not candfiles:
             destfile = destfile.parent / ('[1]' + destfile.name)
@@ -34,5 +34,7 @@ def copy_to_media(filepath, destfile):
                 maxnum + 1, destfile.name))
 
     destfile.parent.mkdir(exist_ok=True, parents=True)
+    if destfile.is_symlink():
+        destfile.unlink()
     copyfile(str(filepath), str(destfile))
     return destfile

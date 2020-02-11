@@ -9,7 +9,7 @@ from .filters.utils import copy_to_media
 
 HERE = Path(__file__).resolve().parent
 DEFAULT_FILTERS = ['table', 'link', 'image']
-DEFAULT_TEMPLATE = 'semantic'
+DEFAULT_TEMPLATE = 'layui'
 
 
 def _replace_all(regex, callback, string):
