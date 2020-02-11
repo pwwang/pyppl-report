@@ -15,6 +15,8 @@ Following heading will be excluded:
 
 ## This is a very very very very very very very very very long heading
 
+### This is a third-level heading
+
 # Admonitions
 
 :::{.admon .note head=Hello}
