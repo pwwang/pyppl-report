@@ -34,7 +34,7 @@ def copy_to_media(filepath, destfile):
                 maxnum + 1, destfile.name))
 
     destfile.parent.mkdir(exist_ok=True, parents=True)
-    if destfile.is_symlink():
+    if destfile.is_symlink(): # pragma: no cover
         destfile.unlink()
     copyfile(str(filepath), str(destfile))
     return destfile

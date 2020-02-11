@@ -212,35 +212,35 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; }
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; }
-code span.at { color: #7d9029; }
-code span.bn { color: #40a070; }
-code span.bu { }
-code span.cf { color: #007020; font-weight: bold; }
-code span.ch { color: #4070a0; }
-code span.cn { color: #880000; }
-code span.co { color: #60a0b0; font-style: italic; }
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; }
-code span.do { color: #ba2121; font-style: italic; }
-code span.dt { color: #902000; }
-code span.dv { color: #40a070; }
-code span.er { color: #ff0000; font-weight: bold; }
-code span.ex { }
-code span.fl { color: #40a070; }
-code span.fu { color: #06287e; }
-code span.im { }
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; }
-code span.kw { color: #007020; font-weight: bold; }
-code span.op { color: #666666; }
-code span.ot { color: #007020; }
-code span.pp { color: #bc7a00; }
-code span.sc { color: #4070a0; }
-code span.ss { color: #bb6688; }
-code span.st { color: #4070a0; }
-code span.va { color: #19177c; }
-code span.vs { color: #4070a0; }
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; }
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
 p {
 margin-bottom: 8px;
 }
@@ -348,6 +348,7 @@ top: 28px;
           <p>Following heading will be excluded:</p>
           <h2 data-toc="false" id="toc-excluded" data-toc="false">TOC-excluded</h2>
           <h2 id="this-is-a-very-very-very-very-very-very-very-very-very-long-heading">This is a very very very very very very very very very long heading</h2>
+          <h3 id="this-is-a-third-level-heading">This is a third-level heading</h3>
           <h1 id="admonitions">Admonitions</h1>
           <div class="admon note" data-head="Hello">
           <p>This is a note</p>
@@ -392,13 +393,15 @@ top: 28px;
           <h2 id="tables-without-data-file">Tables without data file</h2>
           <div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="bn">```table</span></span>
           <span id="cb4-2"><a href="#cb4-2"></a><span class="bn">caption: Data table</span></span>
-          <span id="cb4-3"><a href="#cb4-3"></a><span class="bn">download: true # we can still download</span></span>
-          <span id="cb4-4"><a href="#cb4-4"></a><span class="bn">---</span></span>
-          <span id="cb4-5"><a href="#cb4-5"></a><span class="bn">ID,Name,Sex,Age</span></span>
-          <span id="cb4-6"><a href="#cb4-6"></a><span class="bn">1,Bob,M,49</span></span>
-          <span id="cb4-7"><a href="#cb4-7"></a><span class="bn">2,Alice,F,20</span></span>
-          <span id="cb4-8"><a href="#cb4-8"></a><span class="bn">```</span></span></code></pre></div>
-          <div class="pyppl-report-table" data-prtable-file="bootstrap.files/4ce3a5f938cc3c4f93ca85c381438bc0.txt" data-prtable-download="true" data-prtable-pagesize="25" data-prtable-sort="[0]" data-prtable-caption="Data table" data-prtable-header="[&quot;ID,Name,Sex,Age&quot;]" data-prtable-data="[[&quot;1,Bob,M,49&quot;], [&quot;2,Alice,F,20&quot;]]">
+          <span id="cb4-3"><a href="#cb4-3"></a><span class="bn">download: true</span></span>
+          <span id="cb4-4"><a href="#cb4-4"></a><span class="bn">csvargs:</span></span>
+          <span id="cb4-5"><a href="#cb4-5"></a><span class="bn">  delimiter: &quot;,&quot;</span></span>
+          <span id="cb4-6"><a href="#cb4-6"></a><span class="bn">---</span></span>
+          <span id="cb4-7"><a href="#cb4-7"></a><span class="bn">ID,Name,Sex,Age</span></span>
+          <span id="cb4-8"><a href="#cb4-8"></a><span class="bn">1,Bob,M,49</span></span>
+          <span id="cb4-9"><a href="#cb4-9"></a><span class="bn">2,Alice,F,20</span></span>
+          <span id="cb4-10"><a href="#cb4-10"></a><span class="bn">```</span></span></code></pre></div>
+          <div class="pyppl-report-table" data-prtable-file="bootstrap.files/4ce3a5f938cc3c4f93ca85c381438bc0.txt" data-prtable-download="true" data-prtable-pagesize="25" data-prtable-sort="[0]" data-prtable-caption="Data table" data-prtable-header="[&quot;ID&quot;, &quot;Name&quot;, &quot;Sex&quot;, &quot;Age&quot;]" data-prtable-data="[[&quot;1&quot;, &quot;Bob&quot;, &quot;M&quot;, &quot;49&quot;], [&quot;2&quot;, &quot;Alice&quot;, &quot;F&quot;, &quot;20&quot;]]">
 
           </div>
           <h1 id="referenceslinks">References/Links</h1>
@@ -556,7 +559,7 @@ top: 28px;
              Best experience with
             <a href="https://www.google.com/chrome/">Chrome</a>,
             powered
-
+            
             by <a href="https://github.com/pwwang/PyPPL">PyPPL</a>
             v3.0.3 with
             <a href="https://github.com/pwwang/pyppl-report">
@@ -837,7 +840,8 @@ top: 28px;
         a.target = '_blank';
         a.click();
     });
-});</script>
+});
+</script>
 <script>/*!
   * Bootstrap v4.3.1 (https://getbootstrap.com/)
   * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
@@ -1225,7 +1229,8 @@ l.register("scroller()",function(){return this});l.register("scroller().rowToPix
 l.register("row().scrollTo()",function(a){var b=this;this.iterator("row",function(c,d){c.oScroller&&(d=b.rows({order:"applied",search:"applied"}).indexes().indexOf(d),c.oScroller.scrollToRow(d,a))});return this});l.register("scroller.measure()",function(a){this.iterator("table",function(b){b.oScroller&&b.oScroller.measure(a)});return this});l.register("scroller.page()",function(){var a=this.context;if(a.length&&a[0].oScroller)return a[0].oScroller.pageInfo()});return g});
 </script>
 <script>/*! echo-js v1.7.3 | (c) 2016 @toddmotto | https://github.com/toddmotto/echo */
-!function(t,e){"function"==typeof define&&define.amd?define(function(){return e(t)}):"object"==typeof exports?module.exports=e:t.echo=e(t)}(this,function(t){"use strict";var e,n,o,r,c,a={},u=function(){},d=function(t){return null===t.offsetParent},l=function(t,e){if(d(t))return!1;var n=t.getBoundingClientRect();return n.right>=e.l&&n.bottom>=e.t&&n.left<=e.r&&n.top<=e.b},i=function(){(r||!n)&&(clearTimeout(n),n=setTimeout(function(){a.render(),n=null},o))};return a.init=function(n){n=n||{};var d=n.offset||0,l=n.offsetVertical||d,f=n.offsetHorizontal||d,s=function(t,e){return parseInt(t||e,10)};e={t:s(n.offsetTop,l),b:s(n.offsetBottom,l),l:s(n.offsetLeft,f),r:s(n.offsetRight,f)},o=s(n.throttle,250),r=n.debounce!==!1,c=!!n.unload,u=n.callback||u,a.render(),document.addEventListener?(t.addEventListener("scroll",i,!1),t.addEventListener("load",i,!1)):(t.attachEvent("onscroll",i),t.attachEvent("onload",i))},a.render=function(n){for(var o,r,d=(n||document).querySelectorAll("[data-echo], [data-echo-background]"),i=d.length,f={l:0-e.l,t:0-e.t,b:(t.innerHeight||document.documentElement.clientHeight)+e.b,r:(t.innerWidth||document.documentElement.clientWidth)+e.r},s=0;i>s;s++)r=d[s],l(r,f)?(c&&r.setAttribute("data-echo-placeholder",r.src),null!==r.getAttribute("data-echo-background")?r.style.backgroundImage="url("+r.getAttribute("data-echo-background")+")":r.src!==(o=r.getAttribute("data-echo"))&&(r.src=o),c||(r.removeAttribute("data-echo"),r.removeAttribute("data-echo-background")),u(r,"load")):c&&(o=r.getAttribute("data-echo-placeholder"))&&(null!==r.getAttribute("data-echo-background")?r.style.backgroundImage="url("+o+")":r.src=o,r.removeAttribute("data-echo-placeholder"),u(r,"unload"));i||a.detach()},a.detach=function(){document.removeEventListener?t.removeEventListener("scroll",i):t.detachEvent("onscroll",i),clearTimeout(n)},a});</script>
+!function(t,e){"function"==typeof define&&define.amd?define(function(){return e(t)}):"object"==typeof exports?module.exports=e:t.echo=e(t)}(this,function(t){"use strict";var e,n,o,r,c,a={},u=function(){},d=function(t){return null===t.offsetParent},l=function(t,e){if(d(t))return!1;var n=t.getBoundingClientRect();return n.right>=e.l&&n.bottom>=e.t&&n.left<=e.r&&n.top<=e.b},i=function(){(r||!n)&&(clearTimeout(n),n=setTimeout(function(){a.render(),n=null},o))};return a.init=function(n){n=n||{};var d=n.offset||0,l=n.offsetVertical||d,f=n.offsetHorizontal||d,s=function(t,e){return parseInt(t||e,10)};e={t:s(n.offsetTop,l),b:s(n.offsetBottom,l),l:s(n.offsetLeft,f),r:s(n.offsetRight,f)},o=s(n.throttle,250),r=n.debounce!==!1,c=!!n.unload,u=n.callback||u,a.render(),document.addEventListener?(t.addEventListener("scroll",i,!1),t.addEventListener("load",i,!1)):(t.attachEvent("onscroll",i),t.attachEvent("onload",i))},a.render=function(n){for(var o,r,d=(n||document).querySelectorAll("[data-echo], [data-echo-background]"),i=d.length,f={l:0-e.l,t:0-e.t,b:(t.innerHeight||document.documentElement.clientHeight)+e.b,r:(t.innerWidth||document.documentElement.clientWidth)+e.r},s=0;i>s;s++)r=d[s],l(r,f)?(c&&r.setAttribute("data-echo-placeholder",r.src),null!==r.getAttribute("data-echo-background")?r.style.backgroundImage="url("+r.getAttribute("data-echo-background")+")":r.src!==(o=r.getAttribute("data-echo"))&&(r.src=o),c||(r.removeAttribute("data-echo"),r.removeAttribute("data-echo-background")),u(r,"load")):c&&(o=r.getAttribute("data-echo-placeholder"))&&(null!==r.getAttribute("data-echo-background")?r.style.backgroundImage="url("+o+")":r.src=o,r.removeAttribute("data-echo-placeholder"),u(r,"unload"));i||a.detach()},a.detach=function(){document.removeEventListener?t.removeEventListener("scroll",i):t.detachEvent("onscroll",i),clearTimeout(n)},a});
+</script>
 <script>$(function() {
 
 
