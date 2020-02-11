@@ -18,9 +18,10 @@ pip install pyppl_report
 
 ````python
 pPyClone.config.report_template = """
-# {{title}}
+# {{report.title}}
 
-PyClone[1] is a tool using Probabilistic model for inferring clonal population structure from deep NGS sequencing.
+PyClone[1] is a tool using Probabilistic model for inferring clonal population
+structure from deep NGS sequencing.
 
 ![Similarity matrix]({{path.join(job.o.outdir, "plots/loci/similarity_matrix.svg")}})
 
@@ -30,7 +31,8 @@ file: "{{path.join(job.o.outdir, "tables/cluster.tsv")}}"
 rows: 10
 ```
 
-[1]: Roth, Andrew, et al. "PyClone: statistical inference of clonal population structure in cancer." Nature methods 11.4 (2014): 396.
+[1]: Roth, Andrew, et al. "PyClone: statistical inference of clonal population structure in cancer."
+Nature methods 11.4 (2014): 396.
 """
 
 # or use a template file
@@ -69,9 +71,11 @@ Then in your template, you can use it:
 
 We use `[1]`, `[2]` ... to link to the references, so HTML links have to be in-place (in the format of `[text](link)` instead of `[text][link-index]`). All references from different processes will be re-ordered and combined.
 
-## See detailed documentation for writing reports in markdown
+## Built-in themes
 
-<https://github.io/pwwang/pyppl_report>
+[Bootstrip]()
+[Layui]()
+[Semantic]()
 
 
 [1]: https://github.com/pwwang/PyPPL
